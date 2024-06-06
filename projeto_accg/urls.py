@@ -17,9 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import home
+from app.views import home, adminAccg, cadastro, create, animal, editar, atualizar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home)
+    path('', home, name='home'),
+    path('admin-accg/', adminAccg, name='adminAccg'),
+    path('admin-accg/cadastrar/', cadastro, name='cadastro'),
+    path('admin-accg/animal/<int:pk>/', animal, name='animal'),
+    path('admin-accg/editar/<int:pk>/', editar, name='editar'),
+    path('admin-accg/atualizar/<int:pk>/', atualizar, name='atualizar'),
+    path('admin-accg/create/', create)
 ]
