@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Pagina de contato</h1>
+
+    <header>
+        <img src="img/logocaoegato.png"/>
+    </header>
+
+
+    <section class="container">
+        <h1>Entre em contato com a ASCG</h1>
+        <div class="links-formulario">
+            <div class="links-col">
+                <div class="frase-icon">
+                    <h3>Me envie uma mensagem</h3>
+                </div>
+                <span>Entre em contato comigo através do formulário ao lado ou pelas redes sociais abaixo para discutir mais detalhes, esclarecer dúvidas ou fornecer informações adicionais.
+                    Atenciosamente,
+                    Associação da Casa de Cães e Gatos.
+                </span>
+                <div class="links">
+                    <div class="icon-text">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <p>https://www.facebook.com/AssociacaoCasaDoCaoEGatoAccg/</p>
+                    </div>
+
+                    <div class="icon-text">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <p>https://www.instagram.com/casadocaoegato/</p>
+                    </div>
+
+                    <div class="icon-text">
+                        <a href="https://www.instagram.com/casadocaoegato/"><i class="fab fa-whatsapp"></i></a>
+                        <p>https://www.instagram.com/casadocaoegato/</p>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="formulario">
+                <form action="https://api.staticforms.xyz/submit" method="post">
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu email" autocomplete="off"required>
+                    <label>Motivo do contato</label>
+                    <input type="text" name="name" placeholder="Digite o motivo do contato" autocomplete="off" required>
+                    <label>Mensagem</label>
+                    <textarea name="message" placeholder="digite sua mensagem"required></textarea>
+                    <button>Enviar</button>
+    
+                    <input type="hidden" name="accessKey" value="4751c61b-ad3b-4246-869b-52810bf3706b">
+                    
+                </form>
+            </div>
+        </div>
+
+    </section>
     
 </body>
 </html>
