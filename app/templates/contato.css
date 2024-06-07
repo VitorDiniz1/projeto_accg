@@ -37,6 +37,11 @@ h1{
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .links-formulario{
     align-items: center;
     display: flex;
@@ -83,14 +88,14 @@ h1{
     transition: 0.7s;
 }
 
-.links-col .icon-text a{
+.links-col .icon-text i{
     text-decoration: none;
     color: black;
     transition: 0.7s;
 }
 
-.links-col .icon-text a:hover{
-    color: #0ef;
+.links-col .icon-text i:hover{
+    color: blue;
     transform: scale(1.1);
 }
 
@@ -105,11 +110,11 @@ h1{
 
 .links .icon-text p{
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .links .icon-text p:hover{
-    color: #0ef;
+    color: blue;
 }
 
 .formulario{
@@ -142,6 +147,7 @@ h1{
     color: black;
     transition: all 1s;
     margin-bottom: 20px;
+    transition: 0.7s;
 }
 
 .formulario form button:hover{
