@@ -1,1 +1,431 @@
 <!--insira o codigo da home aqui-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+    <header>
+
+        <nav>
+            <div class="div-logo">
+                <a href="#" class="logo"><img src="img/logocaoegato.png" alt="Logo"/></a>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#animals">Nossos animais</a></li>
+                    <li><a href="#about">Quem somos</a></li>
+                    <li><a href="#team">Nosso time</a></li>
+                    <li><a href="#voluntario">Voluntariado</a></li>
+                </ul>
+            </div>
+
+            <div class="login-button">
+                <a href="#">
+                    <button>Login</button>
+                </a>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><i class="fas fa-bars menu-icon" id="menu-icon"></i></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#animals">Nossos animais</a></li>
+                <li><a href="#about">Quem somos</a></li>
+                <li><a href="#team">Nosso time</a></li>
+                <li><a href="#voluntario">Voluntariado</a></li>
+            </ul>
+
+            <div class="login-button">
+                <a href="#">
+                    <button>Login</button>
+                </a>
+            </div>
+
+
+        </div>
+    </header>
+
+    <section id="home" class="section">
+        <div class="home-row">
+            <div class="div-btn"> 
+                <a href="#animals">
+                    <div class="div-col">
+                        <div class="div-row">
+                            <img src="img/dog.png">
+                            <img src="img/cat.png">
+                        </div>
+                        <p>Quero adotar</p>
+                    </div>
+                </a>
+                <a href="help.html" target="_blank">
+                    <div class="div-col">
+                        <img src="img/teamwork.png">
+                        <p>Quero ajudar</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="div-col">
+                        <img src="img/trainer.png">
+                        <p>Quero apadrinhar</p>
+                    </div>
+                </a>
+            </div>
+            <div class="text-carrossel">
+                <div class="h2-container">
+                    <h2>Encontre seu parceiro pet e transforme uma vida</h2>
+                </div>
+
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <div class="slide first">
+                            <img src="img/pexels-pixabay-236606.jpg" alt="">
+                        </div>
+            
+                        <div class="slide">
+                            <img src="img/pexels-jagheterjohann-1254140.jpg" alt="">
+                        </div>
+            
+                        <div class="slide">
+                            <img src="img/pexels-jhelmuth-3995452.jpg" alt="">
+                        </div>
+            
+                        <div class="slide">
+                            <img src="img/pexels-jagheterjohann-1254140.jpg" alt="">
+                        </div>
+            
+                        
+            
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <div class="manual-navigation">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2"class="manual-btn"></label>
+                        <label for="radio3"class="manual-btn"></label>
+                        <label for="radio4"class="manual-btn"></label>
+            
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <section id="animals">
+        <div class="animal container">
+            <h1>Nossos animais</h1>
+            <h3>Na ASCG, encontram-se diversos animais disponíveis para adoção. Escolha um e adote!</h3>
+            <div class="select-row">
+                <select name="" id="">
+                    <option value="Cão e Gato">Cão e Gato</option>
+                    <option value="Cão">Cão</option>
+                    <option value="Gato">Gato</option>
+                </select>
+                <span class="title"></span>
+
+                <select name="" id="">
+                    <option value="Macho">Macho</option>
+                    <option value="Femea">Femea</option>
+                </select>
+                <span class="title2 title"></span>
+
+                <select name="" id="">
+                    <option value="Grande porte">Grande porte</option>
+                    <option value="Médio porte">Médio porte</option>
+                    <option value="Pequeno porte">Pequeno porte</option>
+                </select>
+                <span class=" title3 title"></span>
+
+                <button class="btn-search">Buscar</button>
+            </div>
+            <div class="fotos-animais">
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="img/ft-1-animal.jpg"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="img/ft-1-animal.jpg"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="img/ft-1-animal.jpg"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="img/ft-1-animal.jpg"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="img/ft-1-animal.jpg"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="img/ft-1-animal.jpg"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section id="about">
+        <div class=" about container">
+            <h1>Quem somos</h1>
+            <h3>Leia abaixo para saber mais sobre nós e como você pode ajudar a transformar a vida de cães e gatos em busca de um lar amoroso </h3>
+            <div class="about-fundo">
+                <div class="about-text">
+                    <p>
+                        A Associação Casa do Cão e Gato (ACCG) é uma organização sem fins lucrativos, constituída por pessoas comprometidas em ajudar animais.
+                    </p>
+                    <p>
+                        Operamos exclusivamente com trabalho voluntário e não recebemos ajuda governamental, tampouco temos envolvimento político. Somos movidos pela vontade de fazer a diferença na vida dos animais, sem esperar recompensas materiais em troca.
+                    </p>
+                    <p>
+                       Localizada no Morro do Castro, na divisa entre Niterói e São Gonçalo, a ACCG mantém um abrigo que atualmente acolhe mais de 100 animais, entre cães e gatos, além de outros em lares temporários.
+                    </p>
+                </div>
+                <div class="about-img">
+                    <img src="img/TDE3.png">
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <section id="team">
+
+        <div class="container">
+            <h1>Nosso Time</h1>
+            <h3>Na ACCG, contamos com uma equipe excepcional dedicada a encontrar um lar para nossos cães e gatos, comprometida em ajudar de maneira justa e honesta.</h3>
+
+            <div class="help-row">
+                <div class=" teams help-img">
+                    <div class=" team img-align">
+                        <img src="img/avatar.png">
+                    </div>
+                    <p>Thiago Gomes</p>
+                    <div class="btn-cargo">
+                        <p>Cargo</p>
+                    </div>
+        
+                    <div class="social-midia">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class=" teams help-img">
+                    <div class=" team img-align">
+                        <img src="img/avatar.png">
+                    </div>
+                    <p>Danilo</p>
+                    <div class="btn-cargo">
+                        <p>cargo</p>
+                    </div>
+                    <div class="social-midia">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class=" teams help-img">
+                    <div class=" team img-align">
+                        <img src="img/avatar.png">
+                    </div>
+                    <p>Patetuci</p>
+                    <div class="btn-cargo">
+                        <p>Cargo</p>
+                    </div>
+                    
+                    <div class="social-midia">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class=" teams help-img">
+                    <div class=" team img-align">
+                        <img src="img/avatar.png">
+                    </div>
+                    <p>Gabriel</p>
+                    <div class="btn-cargo">
+                        <p>Cargo</p>
+                    </div>
+                    
+                    <div class="social-midia">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class=" teams help-img">
+                    <div class=" team img-align">
+                        <img src="img/avatar.png">
+                    </div>
+                    <p>Salgado</p>
+                    <div class="btn-cargo">
+                        <p>Cargo</p>
+                    </div>
+                    
+                    <div class="social-midia">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+               
+
+                
+            </div>
+        </div>
+        
+    </section>
+
+
+
+
+    <section id="voluntario">
+        <div class=" about container">
+            <h1>Voluntariado</h1>
+            <h3>Seja um voluntário e ajude um cão ou gato a ter um lar!</h3>
+            <div class="about-fundo">
+                <div class="about-text">
+                    <p> 
+                        Caso tenha interesse em ser voluntário da ACCG, entre em contato conosco clicando <a href="#"><b>aqui</b></a>, e compartilhe informações sobre você e como poderia contribuir.
+                    </p>
+                    <p>
+                    Por exemplo: "Sou engenheiro e posso ajudar nas obras do abrigo", ou "Gosto muito de cuidar de animais, especialmente gatos", ou ainda, "Entendo de mídias sociais e posso ajudar com o Instagram da ACCG". Todas as habilidades são reconhecidas e muito úteis para o crescimento da ACCG!
+                    </p>
+                </div>
+                <div class="about-img">
+                    <img src="img/TDE3.png">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    
+    <footer>
+        <a href="#" class="logo"><img src="img/logocaoegato.png" alt="Logo"/></a>
+        <div class="footer-col">
+
+            <div class="icon-text">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>rua alhuma coisa, 21</p>
+            </div>
+
+            <div class="icon-text">
+                <i class="fas fa-envelope"></i>
+                <p>Email@email.com</p>
+            </div>
+
+            <div class="icon-text">
+                <i class="fas fa-phone"></i>
+                <p>(21) 99999-8888</p>
+            </div>
+
+        </div>
+
+        <div class=" footer-col-links">
+            <a href="#">Quero adotar</a>
+            <a href="help.html">Como ajudar</a>
+            <a href="#">Quero apadrinhar</a>
+        </div>
+
+        <div class="footer-col">
+            <div class="icon-text">
+                <h3>Entre em contato com a gente</h3>
+            </div>
+            <div class="midia-contato">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
