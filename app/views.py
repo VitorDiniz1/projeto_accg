@@ -51,3 +51,8 @@ def atualizar(request, pk):
         form.save()
         messages.success(request, 'Animal atualizado com sucesso!')
         return redirect('adminAccg')
+
+def deletar(request, pk):
+    db = Animais.objects.get(pk=pk)
+    db.delete()
+    return redirect('adminAccg')
