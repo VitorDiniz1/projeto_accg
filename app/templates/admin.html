@@ -47,12 +47,16 @@
               <td>
                 <a href="/admin-accg/animal/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
                 <a href="/admin-accg/editar/{{dbs.id}}/" class="btn btn-primary">Editar</a>
-                <a href="/admin-accg/deletar/{{dbs.id}}/" class="btn btn-danger">Deletar</a>
+                <a href="/admin-accg/deletar/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
             </td>
             </tr>
           {% endfor %}
           </tbody>
         </table>
     </div>
+
+    {% load static %} 
+    <script src="{% static 'admin.js' %}"></script>
+
 </body>
 </html>
