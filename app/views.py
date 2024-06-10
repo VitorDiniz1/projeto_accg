@@ -3,11 +3,17 @@ from django.shortcuts import render, redirect
 from app.forms import AnimaisForm
 from django.contrib import messages
 from app.models import Animais
+from django.core.paginator import Paginator
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    data = {}
+    all = Animais.objects.all()
+    paginator = Paginator(all, 6)
+    pages = request.GET.get('page')
+    data['db'] = paginator.get_page(pages)
+    return render(request, 'index.html', data)
 
 
 def adminAccg(request):
@@ -64,4 +70,18 @@ def contato(request):
     return render(request, 'contato.html')
 
 def filtro(request):
-    return render(request, 'filtro.html')
+    data = {}
+    tipo = request.GET.get('tipo')
+    sexo = request.GET.get('sexo')
+    porte = request.GET.get('porte')
+
+    data['db'] = Animais.objects.all()
+
+    if tipo:
+        data['db'] = data['db'].filter(tipo__icontains=tipo)
+    if sexo:
+        data['db'] = data['db'].filter(sexo__icontains=sexo)
+    if porte:
+        data['db'] = data['db'].filter(porte__icontains=porte)
+
+    return render(request, 'filtro.html', data)

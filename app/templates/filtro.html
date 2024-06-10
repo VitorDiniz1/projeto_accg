@@ -21,85 +21,46 @@
     <section class="container">
 
         <h1>Nossos animais</h1>
+            <form method="get" action="/filtro">
             <div class="select-row">
-                <select name="" id="">
-                    <option value="Cão e Gato">Cão e Gato</option>
-                    <option value="Cão">Cão</option>
+                <select name="tipo" id="tipo">
+                    <option value="">Cão e Gato</option>
+                    <option value="Cachorro">Cão</option>
                     <option value="Gato">Gato</option>
                 </select>
                 <span class="title"></span>
 
-                <select name="" id="">
-                    <option value="Macho">Macho</option>
-                    <option value="Femea">Femea</option>
+                <select name="sexo" id="sexo">
+                    <option value="">Ambos</option>
+                    <option value="M">Macho</option>
+                    <option value="F">Femea</option>
                 </select>
                 <span class="title2 title"></span>
 
-                <select name="" id="">
-                    <option value="Grande porte">Grande porte</option>
-                    <option value="Médio porte">Médio porte</option>
-                    <option value="Pequeno porte">Pequeno porte</option>
+                <select name="porte" id="porte">
+                    <option value="">Todos</option>
+                    <option value="Grande Porte">Grande porte</option>
+                    <option value="Médio Porte">Médio porte</option>
+                    <option value="Pequeno Porte">Pequeno porte</option>
                 </select>
                 <span class=" title3 title"></span>
                 <!--Aqui tem que carregar os animais com os filtros correspondentes-->
-                    <button class="btn-search">Buscar</button>
+                <button class="btn-search">Buscar</button>
             </div>
+            </form>
             <div class="fotos-animais">
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
+                {% for dbs in db %}
+                <a href="/animal/{{dbs.id}}/">
+                    <div class="card-animal">
+                        <div class="foto-animal">
+                            <img src="{{dbs.url_imagem}}"/>
+                        </div>
+                        <div class="nome-animal">
+                            <p>{{dbs.nome}}</p>
+                        </div>
                     </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                    
-                </div>
-
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
-                    </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                </div>
-
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
-                    </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                </div>
-
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
-                    </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                </div>
-
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
-                    </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                </div>
-
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
-                    </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                </div>
-
+                </a>
+                {% endfor %}
             </div>
     </section>
           
