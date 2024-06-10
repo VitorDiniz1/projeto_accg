@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+h1{
+    font-size: 40px;
+    color: #1C1F3F;
+    font-weight: 500;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.links-formulario{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 40px auto;
+    max-width: 90%;
+}
+
+.links-col{
+    width: 500px;
+    flex-basis: 40%;
+}
+
+.frase-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.frase-icon h3{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #1C1F3F;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+.links-col span{
+    font-size: 16px;
+    line-height: 1.3;
+    max-width: 600px;
+    color: #1C1F3F;
+    font-weight: 400;
+
+}
+
+.links-col .icon-text{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.7s;
+}
+
+.links-col .icon-text i{
+    text-decoration: none;
+    color: black;
+    transition: 0.7s;
+}
+
+.links-col .icon-text i:hover{
+    color: blue;
+    transform: scale(1.1);
+}
+
+.links-col .links{
+    margin-top: 20px;
+    margin-bottom: 180px;
+}
+
+.links .icon-text {
+    margin-top: 20px;
+}
+
+.links .icon-text p{
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.links .icon-text p:hover{
+    color: blue;
+}
+
+.formulario{
+    width: 500px;
+}
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formulario form input, .formulario form textarea{
+    background: #fdfdfd;
+    padding: 12px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    resize: none;
+    border: 2px solid #007ba7;
+}
+
+.formulario form button{
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #007ba7;
+    color: black;
+    transition: all 1s;
+    margin-bottom: 20px;
+    transition: 0.7s;
+}
+
+.formulario form button:hover{
+    background: #0ef;
+    color: black;
+    border-radius: 16px;
+}
+
+
