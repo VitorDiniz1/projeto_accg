@@ -56,3 +56,9 @@ def deletar(request, pk):
     db = Animais.objects.get(pk=pk)
     db.delete()
     return redirect('adminAccg')
+
+def help(request):
+    return render(request, 'help.html')
+
+def contato(request):
+    return render(request, 'contato.html')
