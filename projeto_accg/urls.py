@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import home, adminAccg, cadastro, create, animal, editar, atualizar, deletar, help, contato
+from app.views import home, adminAccg, cadastro, create, animal, editar, atualizar, deletar, help, contato,filtro
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,4 +31,5 @@ urlpatterns = [
     path('admin-accg/create/', create),
     path('help/', help),
     path('contato/', contato),
+    path('filtro/', filtro),
 ]

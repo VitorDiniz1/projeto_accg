@@ -62,3 +62,6 @@ def help(request):
 
 def contato(request):
     return render(request, 'contato.html')
+
+def filtro(request):
+    return render(request, 'filtro.html')

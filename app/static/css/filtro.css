@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: fixed;
+}
+
+.container{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.container h1{
+    font-size: 40px;
+    color: #1C1F3F;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 150px;
+}
+
+.container h3{
+    color: #1C1F3F;
+    font-weight: 500;
+}
+
+
+
+.select-row{
+    display: flex;
+    gap: 80px;
+    margin-top: 60px;
+
+
+}
+
+.select-row select{
+    width: 200px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 16px;
+    border: 2px solid #007BA7;
+    border-radius: 4px;
+    color: #39325a;
+    outline: none;
+    background: #fdfdfd;
+    cursor: pointer;
+}
+
+.select-row .title{
+    position: relative;
+    color: #007BA7;
+}
+
+.select-row .title::before{
+    position: absolute;
+    content: 'Animal';
+    top: -10px;
+    left: -276px;
+    background-color: #fff;
+    width: 66px;
+    height: 22px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.select-row .title2::before{
+    content: 'Sexo';
+}
+
+.select-row .title3::before{
+    content: 'Tamanho';
+}
+
+.select-row .btn-search{
+    width: 200px;
+    height: 40px;
+    padding-left: 15px;
+    font-size: 16px;
+    border: 2px solid #007BA7;
+    border-radius: 30px;
+    color: #39325a;
+    outline: none;
+    background: #fdfdfd;
+    cursor: pointer;
+    padding: 0 20px;
+    transition: 0.7s;
+}
+.select-row .btn-search:hover{
+    color: #1C1F3F;
+    background: #0ef;
+}
+
+.fotos-animais{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.card-animal{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #007BA7;
+    margin-top: 20px;
+    transition: 0.7s;
+    border-radius: 5px;
+}
+
+.card-animal:hover{
+    transform: scale(1.1);
+}
+
+
+
+.card-animal .foto-animal img{
+    width: 100%;
+    height: auto;
+    
+}
+
+.card-animal .nome-animal{
+    text-align: center;
+    
+}
+
+.card-animal .nome-animal p{
+    padding: 10px;
+   
+}
+
+@media  (max-width:900px){
+    .select-row{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Define duas colunas com largura igual */
+        gap: 30px; /* Ajuste o espaçamento entre os elementos conforme necessário */
+        margin-top: 60px;
+    }
+
+    .select-row .title::before{
+        left: -230px;
+    }
+
+    
+
+}
+
+@media  (max-width:600px){
+
+    .fotos-animais{
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    
+
+}
