@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import home, adminAccg, cadastro, create, animal, editar, atualizar, deletar, help, contato,filtro
+from app.views import home, adminAccg, cadastro, create, animal, editar, atualizar, deletar, help, contato, filtro, paginaAnimal
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +32,5 @@ urlpatterns = [
     path('help/', help),
     path('contato/', contato),
     path('filtro/', filtro),
+    path('paginaAnimal/<int:pk>/', paginaAnimal, name='paginaAnimal')
 ]

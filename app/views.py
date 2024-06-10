@@ -85,3 +85,9 @@ def filtro(request):
         data['db'] = data['db'].filter(porte__icontains=porte)
 
     return render(request, 'filtro.html', data)
+
+
+def paginaAnimal(request, pk):
+    data = {}
+    data['animal'] = Animais.objects.get(pk=pk)
+    return render(request, 'paginaAnimal.html', data)

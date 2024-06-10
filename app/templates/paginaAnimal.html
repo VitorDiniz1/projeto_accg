@@ -1,0 +1,86 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Animal</title>
+    <link rel="stylesheet" href="{% static 'css/paginaAnimal.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#animals" class="active">Nossos animais</a></li>
+                <li><a href="#about">Quem somos</a></li>
+                <li><a href="#team">Nosso time</a></li>
+                <li><a href="#volunteer">Voluntariado</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="animal-info">
+        <div class="container">
+            <div class="animal">
+                <div class="animal-photo">
+                    <img src="animal-photo.jpg" alt="Foto do animal">
+                </div>
+                    <h1>{{ animal.nome }}</h1>
+                    <p><strong>Espécie:</strong> {{ animal.tipo }}</p>
+                    <p><strong>Gênero:</strong> {{ animal.sexo }}</p>
+                    <p><strong>Idade:</strong> {{ animal.idade }}</p>
+                    <p><strong>Porte:</strong> {{ animal.porte }}</p>
+                    <p><strong>Descrição:</strong> {{ animal.descricao }}</p>
+                    <p><strong>Castrado:</strong>
+                        {% if animal.castrado %}
+                            <p>castrado</p>
+                        {% else %}
+                            <p>não castrado</p>
+                        {% endif %}
+                    <p><strong>Vermifugado:</strong>
+                        {% if animal.vermifugado %}
+                            <p>vermifugado</p>
+                        {% else %}
+                            <p>não vermifugado</p>
+                        {% endif %}
+                    <p><strong>Vacinado:</strong>
+                        {% if animal.vacinado %}
+                            <p>vacinado</p>
+                        {% else %}
+                            <p>não vacinado</p>
+                        {% endif %}
+                    <button class="button">Adotar</button>
+                    <a href="{% url 'home' %}">Voltar para a lista</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-col">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="footer-col">
+                <h3>Entre em contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Alguma Coisa, 123</p>
+                <p><i class="fas fa-envelope"></i> contato@site.com.br</p>
+                <p><i class="fas fa-phone"></i> (11) 99999-8888</p>
+            </div>
+            <div class="footer-col">
+                <h3>Siga-nos</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
