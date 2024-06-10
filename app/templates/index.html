@@ -147,24 +147,27 @@
 
 
     <section id="animals">
+        <form action="/filtro" method="get">
         <div class="animal container">
             <h1>Nossos animais</h1>
             <h3>Na ASCG, encontram-se diversos animais disponíveis para adoção. Escolha um e adote!</h3>
             <div class="select-row">
-                <select name="" id="">
-                    <option value="Cão e Gato">Cão e Gato</option>
-                    <option value="Cão">Cão</option>
+                <select name="tipo" id="tipo">
+                    <option value="">Cão e Gato</option>
+                    <option value="Cachorro">Cão</option>
                     <option value="Gato">Gato</option>
                 </select>
                 <span class="title"></span>
 
-                <select name="" id="">
-                    <option value="Macho">Macho</option>
-                    <option value="Femea">Femea</option>
+                <select name="sexo" id="sexo">
+                    <option value="">Ambos</option>
+                    <option value="M">Macho</option>
+                    <option value="F">Femea</option>
                 </select>
                 <span class="title2 title"></span>
 
-                <select name="" id="">
+                <select name="" id="porte">
+                    <option value="">Todos</option>
                     <option value="Grande porte">Grande porte</option>
                     <option value="Médio porte">Médio porte</option>
                     <option value="Pequeno porte">Pequeno porte</option>
@@ -174,36 +177,22 @@
                     <button class="btn-search">Buscar</button>
                 </a>
             </div>
+            </form>
             <div class="fotos-animais">
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
+                {% for dbs in db %}
+                <a href="/animal/{{dbs.id}}/">
+                    <div class="card-animal">
+                        <div class="foto-animal">
+                            <img src="{{dbs.url_imagem}}"/>
+                        </div>
+                        <div class="nome-animal">
+                            <p>{{dbs.nome}}</p>
+                        </div>
                     </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                    
-                </div>
+                </a>
+                {% endfor %}
 
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
-                    </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                </div>
-
-                <div class="card-animal">
-                    <div class="foto-animal">
-                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
-                    </div>
-                    <div class="nome-animal">
-                        <p>Nome do animal</p>
-                    </div>
-                </div>
-
-                <div class="card-animal">
+                <!--<div class="card-animal">
                     <div class="foto-animal">
                         <img src="{% static 'img/ft-1-animal.jpg' %}"/>
                     </div>
@@ -230,6 +219,24 @@
                     </div>
                 </div>
 
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>
+
+                <div class="card-animal">
+                    <div class="foto-animal">
+                        <img src="{% static 'img/ft-1-animal.jpg' %}"/>
+                    </div>
+                    <div class="nome-animal">
+                        <p>Nome do animal</p>
+                    </div>
+                </div>-->
+            <a href="/filtro">Ver Todos</a>
             </div>
         </div>
 
