@@ -35,17 +35,14 @@ header{
 }
 
 .container h1{
-    font-size: 40px;
+    font-size: 50px;
     color: #1C1F3F;
     font-weight: 500;
     margin-bottom: 20px;
     margin-top: 150px;
+    text-align: center;
 }
 
-.container h3{
-    color: #1C1F3F;
-    font-weight: 500;
-}
 
 
 
