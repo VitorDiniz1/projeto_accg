@@ -44,7 +44,7 @@ header{
     color: #1C1F3F;
     font-weight: 500;
     margin-bottom: 20px;
-    margin-top: 150px;
+    margin-top: 300px;
     text-align: center;
 }
 
@@ -193,3 +193,110 @@ header{
     
 
 }
+
+/*********
+FOOTER
+
+**********/
+
+footer{
+    width: 100%;
+    padding: 15px 100px;
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    color: #fdfdfd;
+}
+
+
+.footer-col{
+    flex-direction: column;
+    display: flex;
+    gap: 18px;
+}
+
+.footer-col .icon-text{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.7s;
+}
+
+.footer-col .icon-text h3{
+    color: #0ef;
+
+}
+
+.footer-col .icon-text:hover{
+    color: #0ef;
+    transform: scale(1.1);
+    
+}
+
+.footer-col-links{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer-col-links a{
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: 0.7s;
+}
+
+.footer-col-links a:hover{
+    color: #0ef;
+    transform: scale(1.1);
+}
+
+.midia-contato{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.midia-contato i{
+    margin-top: 20px;
+    font-size: 22px;
+    transition: 0.7s;
+    
+}
+
+.midia-contato i:hover{
+    color: #0ef;
+    transform: scale(1.1);
+}
+
+
+@media (max-width:850px){
+    footer{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col{
+        margin: 50px auto;
+    }
+
+    .footer-col .icon-text{
+        margin: 6px auto;
+    }
+
+    
+    .footer-col-links a{
+        margin: 6px auto;
+    }
+}
+/*********
+FOOTER
+
+**********/
