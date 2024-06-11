@@ -31,6 +31,6 @@ urlpatterns = [
     path('admin-accg/create/', create),
     path('help/', help),
     path('contato/', contato),
-    path('filtro/', filtro),
+    path('filtro/', filtro, name='filtro'),
     path('paginaAnimal/<int:pk>/', paginaAnimal, name='paginaAnimal')
 ]
