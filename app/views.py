@@ -4,7 +4,8 @@ from app.forms import AnimaisForm
 from django.contrib import messages
 from app.models import Animais
 from django.core.paginator import Paginator
-
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
@@ -86,8 +87,22 @@ def filtro(request):
 
     return render(request, 'filtro.html', data)
 
-
 def paginaAnimal(request, pk):
     data = {}
     data['animal'] = Animais.objects.get(pk=pk)
     return render(request, 'paginaAnimal.html', data)
+
+def loginAdmin(request):
+    return render(request,'login.html')
+
+#Processa o login
+def dologin(request):
+    data = {}
+    user = authenticate(username=request.POST['user'], password=request.POST['password'])
+    if user is not None:
+        login(request, user)
+        return redirect('/admin-accg/')
+    else:
+        data['msg'] = 'Usuário ou Senha inválidos!'
+        data['class'] = 'alert-danger'
+        return render(request,'login.html',data)

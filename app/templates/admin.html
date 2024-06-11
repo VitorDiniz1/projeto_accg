@@ -8,57 +8,62 @@
 </head>
 
 <body>
-    <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Painel Admin ACCG</h1>
-    </div>
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <div class="col-8 m-auto pt-2 pb-2 text-center">
+            <h1>Painel Admin ACCG</h1>
+        </div>
 
-    <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/admin-accg/cadastrar" class="btn btn-success">Cadastrar Animal</a>
-    </div>
+        <div class="col-8 m-auto pt-3 pb-2 text-center">
+            <a href="/admin-accg/cadastrar" class="btn btn-success">Cadastrar Animal</a>
+        </div>
 
-    <div class="col-8 m-auto pt-4 pb-2 text-center">
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nome</th>
-              <th scope="col">Tipo</th>
-              <th scope="col">Sexo</th>
-              <th scope="col">Idade</th>
-              <th scope="col">Porte</th>
-              <th scope="col">Descrição</th>
-              <th scope="col">Castrado</th>
-              <th scope="col">Vacinado</th>
-              <th scope="col">Vermifugado</th>
-              <th scope="col">Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-          {% for dbs in db %}
-            <tr>
-              <th>{{dbs.id}}</th>
-              <td>{{dbs.nome}}</td>
-              <td>{{dbs.tipo}}</td>
-              <td>{{dbs.sexo}}</td>
-              <td>{{dbs.idade}}</td>
-              <td>{{dbs.porte}}</td>
-              <td>{{dbs.descricao}}</td>
-              <td>{{dbs.castrado}}</td>
-              <td>{{dbs.vacinado}}</td>
-              <td>{{dbs.vermifugado}}</td>
-              <td>
-                <a href="/admin-accg/animal/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
-                <a href="/admin-accg/editar/{{dbs.id}}/" class="btn btn-primary">Editar</a>
-                <a href="/admin-accg/deletar/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
-            </td>
-            </tr>
-          {% endfor %}
-          </tbody>
-        </table>
-    </div>
+        <div class="col-8 m-auto pt-4 pb-2 text-center">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Sexo</th>
+                  <th scope="col">Idade</th>
+                  <th scope="col">Porte</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Castrado</th>
+                  <th scope="col">Vacinado</th>
+                  <th scope="col">Vermifugado</th>
+                  <th scope="col">Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for dbs in db %}
+                <tr>
+                  <th>{{dbs.id}}</th>
+                  <td>{{dbs.nome}}</td>
+                  <td>{{dbs.tipo}}</td>
+                  <td>{{dbs.sexo}}</td>
+                  <td>{{dbs.idade}}</td>
+                  <td>{{dbs.porte}}</td>
+                  <td>{{dbs.descricao}}</td>
+                  <td>{{dbs.castrado}}</td>
+                  <td>{{dbs.vacinado}}</td>
+                  <td>{{dbs.vermifugado}}</td>
+                  <td>
+                    <a href="/admin-accg/animal/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+                    <a href="/admin-accg/editar/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+                    <a href="/admin-accg/deletar/{{dbs.id}}/" class="btn btn-danger btnDel">Deletar</a>
+                </td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+        </div>
 
-    {% load static %} 
-    <script src="{% static 'admin.js' %}"></script>
-
+        {% load static %}
+        <script src="{% static 'admin.js' %}"></script>
+    {% else %}
+        Área Restrita
+    {% endif %}
 </body>
+{% endblock %}
 </html>

@@ -1,11 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title> Criar Conta </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-    <h1>Login ao se cadastrar  sendo redirecionado para a pagina de adm </h1>
+  <center>
+    <div id='principal'>
+        <center><img src=''></center>
+        <h2>Acesse sua conta:</h2>
+        <form method="post" action="/dologin/">
+          {% if msg %}
+            <div class="alert {{class}}">
+              {{msg}}
+            </div>
+          {% endif %}
+
+          {% csrf_token %}
+          <div class="form-group1">
+            <label for='user' align='left'> Usuário:</label>
+            <br>
+            <input type="text" id="user" name="user" size="45" placeholder="Usuário" required>
+          </div>
+          <div class="form-group2">
+            <label for='password' align='left'>Senha:</label>
+            <br>
+            <input type="password" id="password" name="password" size="45" placeholder="Senha" required>
+          </div>
+          <p><button type="submit" class='button'>Entrar</button></p>
+          <br>
+        </form>
+        <footer>
+          <strong>&copy; 2024, Associação Casa do Cão & Gato, Todos merecem encontrar uma família acolhedora com muito
+            amor para dar!
+          </strong><br>
+          (Todos os direitos reservados)
+        </footer>
+  </div>
+  </center>
 </body>
+
 </html>
