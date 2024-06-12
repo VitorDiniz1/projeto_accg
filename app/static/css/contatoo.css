@@ -33,6 +33,7 @@ header{
     display: flex;
     flex-direction: column;
     margin-top: 70px;
+    height: 100vh;
 }
 
 .container h1{
@@ -174,5 +175,34 @@ a{
     .links-col .links{
         margin-bottom: 30px;
     }
+
+    .links-col {
+        width: 600px;
+    }
+
+    .formulario{
+        width: 600px;
+    }
+
 }
 
+@media (max-width: 500px) {
+    .links-col {
+        width: 410px;
+    }
+
+    .formulario{
+        width: 410px;
+    }
+}
+
+@media (max-width: 400px) {
+    .links-col {
+        width: 380px;
+    }
+
+    .formulario{
+        width: 380px;
+    }
+
+}

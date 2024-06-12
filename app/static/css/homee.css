@@ -95,64 +95,126 @@ nav a.active{
     display: none;
 }
 
-@media (max-width:1150px){
-    nav{
+@media (max-width: 1150px) {
+    nav {
         padding: 1.5rem 4rem;
     }
 
-    nav li{
+    nav li {
         display: none;
     }
 
-    .login-button{
+    .login-button {
         display: none;
     }
-    .mobile-menu-icon{
+
+    .mobile-menu-icon {
         display: block;
         background: transparent;
+        padding: 0 20px;
     }
 
-    .mobile-menu-icon button i{
+    .mobile-menu-icon button i {
         font-size: 50px;
         color: #0ef;
     }
 
-    .mobile-menu-icon button{
+    .mobile-menu-icon button {
         background: transparent;
         border: none;
         cursor: pointer;
     }
 
-    .mobile-menu ul{
+    .mobile-menu ul {
         display: flex;
         text-align: center;
         flex-direction: column;
         padding-bottom: 1rem;
     }
 
-    .mobile-menu li{
+    .mobile-menu li {
         display: block;
         padding-top: 1rem;
         color: #fdfdfd;
     }
-    .mobile-menu .login-button{
+
+    .mobile-menu .login-button {
         display: block;
         padding: 1rem 2rem;
     }
 
-    .mobile-menu .login-button button{
+    .mobile-menu .login-button button {
         width: 100%;
     }
 
-    .open{
+    .open {
         display: block;
     }
 }
 
-@media (max-width:500px){
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 20px;
+    }
 
-    nav{
-        padding:20px 10px;
+    .logo {
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .mobile-menu-icon button i {
+        font-size: 40px;
+    }
+
+    .mobile-menu ul {
+        padding-bottom: 0.5rem;
+    }
+
+    .mobile-menu li {
+        padding-top: 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        padding: 20px 10px;
+    }
+
+    .logo {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .mobile-menu-icon {
+        padding: 0 10px;
+    }
+
+    .mobile-menu-icon button i {
+        font-size: 30px;
+    }
+
+    .mobile-menu ul {
+        padding-bottom: 0.5rem;
+    }
+
+    .mobile-menu li {
+        padding-top: 0.5rem;
     }
 }
 
@@ -189,6 +251,7 @@ section{
 HOME
 
 **********/
+
 .home-row{
     display: flex;
     align-items: center;
@@ -370,48 +433,149 @@ HOME
     background: blue;
 }
 
- @media (max-width:1000px) {
-
-    .cao-text{
+@media only screen and (max-width: 1024px) {
+    .home-row {
         flex-direction: column;
-    }
-
-    section .div-text{
-        margin-top: 260px;
-
-    }
-    section .div-cao{
+        gap: 40px;
         margin-top: 50px;
     }
 
-
- }
-
- @media (max-width:650px) {
-
-    .div-text .div-btn{
-        flex-wrap: wrap;
+    .div-btn {
+        gap: 20px;
+        flex-direction: row;
     }
 
-    section .div-text{
-        margin-top: 200px;
+    .div-btn .div-col {
+        padding: 15px 20px;
     }
 
-    section .div-text h2 {
-        font-size: 20px;
+    .div-btn .div-col p {
+        font-size: 16px;
     }
 
-    .div-text .div-btn .div-col{
-        width: 120px;
-        height: 120px;
-     }
+    .h2-container {
+        max-width: 80%;
+    }
 
-     section .div-cao{
-        display: none;
-        
-     }
+    .slider{
+        width: 600px;
+        height: 300px;
+    }
+    .slides{
+        width: 600%;
+        height: 300px;
+    }
 
- }
+    .slide img{
+        width: 600px;
+    }
+
+    .manual-navigation{
+        width: 600px;
+        margin-top: -40px;
+    }
+
+    .navigation-auto{
+        width: 600px;
+        margin-top: 260px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section{
+        margin-top: 80px;
+    }
+    
+    .home-row {
+        margin-top: 30px;
+    }
+
+    .div-btn {
+        flex-direction: column;
+        gap: 20px;
+        margin: 10px auto;
+    }
+
+    .h2-container {
+        max-width: 90%;
+    }
+
+    .slider{
+        width: 400px;
+        height: 200px;
+    }
+    .slides{
+        width: 400%;
+        height: 200px;
+    }
+
+    .slide img{
+        width: 400px;
+    }
+
+    .manual-navigation{
+        width: 400px;
+        margin-top: -40px;
+    }
+
+    .navigation-auto{
+        width: 400px;
+        margin-top: 160px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-row {
+        margin-top: 20px;
+    }
+
+    .div-btn {
+        gap: 10px;
+    }
+
+    .div-btn .div-col {
+        padding: 10px;
+    }
+
+    .div-btn .div-col img {
+        width: 40px;
+    }
+
+    .div-btn .div-col p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .h2-container {
+        padding: 0 230px;
+    }
+    .h2-container h2 {
+        font-size: 25px;
+    }
+
+    .slider{
+        width: 400px;
+        height: 200px;
+    }
+    .slides{
+        width: 400%;
+        height: 200px;
+    }
+
+    .slide img{
+        width: 400px;
+    }
+
+    .manual-navigation{
+        width: 400px;
+        margin-top: -40px;
+    }
+
+    .navigation-auto{
+        width: 400px;
+        margin-top: 160px;
+    }
+}
 
 
 /*********
@@ -604,7 +768,7 @@ Aniamis
 
 
 /*********
-About
+HELP
 
 **********/
 
@@ -742,23 +906,6 @@ About
 
 
 
-@media (max-width:650px){
-    .about-text{
-        height:500px;
-    }
-    .about-fundo{
-        flex-direction: column;
-    }
-}
-
-@media (max-width:400px){
-    .about-text{
-        height:700px;
-    }
-    .about-fundo{
-        flex-direction: column;
-    }
-}
 
 
 
@@ -846,7 +993,7 @@ Voluntariado
 
 @media (max-width:450px){
     .about-text {
-        height: 500px;
+        height: 560px;
     }
 }
 
