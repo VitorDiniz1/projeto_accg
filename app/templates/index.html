@@ -180,7 +180,7 @@
             </form>
             <div class="fotos-animais">
                 {% for dbs in db %}
-                <a href="/animal/{{dbs.id}}/">
+                <a href="/paginaAnimal/{{dbs.id}}/">
                     <div class="card-animal">
                         <div class="foto-animal">
                             <img src="{{dbs.url_imagem}}"/>
@@ -191,9 +191,14 @@
                     </div>
                 </a>
                 {% endfor %}
+<<<<<<< HEAD
             
+=======
+<!--<<<<<<< HEAD
+                
+>>>>>>> 2b818ff2dd853481da6cabbb707ec7341992b2bd
 
-                <!--<div class="card-animal">
+                <div class="card-animal">
                     <div class="foto-animal">
                         <img src="{% static 'img/ft-1-animal.jpg' %}"/>
                     </div>
@@ -258,6 +263,7 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
             </div>-->
         </div>
         <div class=" ver-mais login-button">
@@ -265,6 +271,19 @@
                 <button>Ver mais</button>
             </a>
 
+=======
+            </div>
+            <div class=" ver-mais login-button">
+                <a href="/contato" target="_blank">
+                    <button>Ver mais</button>
+                </a>
+=======
+                </div>
+=======
+>>>>>>> 898e151d148fd5467d3c8a3260d609abaee71254-->
+            <a href="/filtro">Ver Todos</a>
+    
+>>>>>>> 2b818ff2dd853481da6cabbb707ec7341992b2bd
         </div>
 
     </section>
@@ -429,7 +448,7 @@
             <a href="#">Quero adotar</a>
             <a href="/help">Como ajudar</a>
             <a href="#">Quero apadrinhar</a>
-            <a href="login.html" target="_blank">Pagina de login</a>
+            <a href="/login/" target="_blank">Pagina de login</a>
         </div>
 
         <div class="footer-col">
