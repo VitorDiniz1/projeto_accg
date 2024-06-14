@@ -16,8 +16,13 @@ class Animais(models.Model):
         "Médio Porte": "Médio Porte",
         "Grande Porte": "Grande Porte",
     }
+    idade = {
+        "Filhote": "Filhote",
+        "Adulto": "Adulto",
+        "Idoso": "Idoso",
+    }
     nome = models.CharField(max_length=30)
-    idade = models.IntegerField()
+    idade = models.CharField(max_length=10, choices=idade)
     descricao = models.TextField()
     castrado = models.BooleanField()
     vacinado = models.BooleanField()

@@ -11,39 +11,46 @@
 </head>
 
 <body>
-  <center>
-    <div id='principal'>
-        <center><img src=''></center>
-        <h2>Acesse sua conta:</h2>
-        <form method="post" action="/dologin/">
-          {% if msg %}
+    <div class="container" >
+      <a class="links" id="paracadastro"></a>
+      <a class="links" id="paralogin"></a>
+       
+      <div class="content">      
+        <!--FORMULÁRIO DE LOGIN-->
+        <div id="login">
+          <form method="post" action="/dologin/">
+            {% if msg %}
             <div class="alert {{class}}">
               {{msg}}
             </div>
           {% endif %}
 
           {% csrf_token %}
-          <div class="form-group1">
-            <label for='user' align='left'> Usuário:</label>
-            <br>
-            <input type="text" id="user" name="user" size="45" placeholder="Usuário" required>
-          </div>
-          <div class="form-group2">
-            <label for='password' align='left'>Senha:</label>
-            <br>
-            <input type="password" id="password" name="password" size="45" placeholder="Senha" required>
-          </div>
-          <p><button type="submit" class='button'>Entrar</button></p>
-          <br>
-        </form>
-        <footer>
-          <strong>&copy; 2024, Associação Casa do Cão & Gato, Todos merecem encontrar uma família acolhedora com muito
-            amor para dar!
-          </strong><br>
-          (Todos os direitos reservados)
-        </footer>
-  </div>
-  </center>
+            <h1>Login</h1> 
+            <p> 
+              <label for="nome_login">Seu usuário:</label>
+              <input id="nome_login" name="nome_login" required="required" type="text" placeholder="Usuário"/>
+            </p>
+             
+            <p> 
+              <label for="password">Sua senha:</label>
+              <input id="password" name="password" required="required" type="password" placeholder="Senha" /> 
+            </p>
+             
+            <p> 
+              <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+              <label for="manterlogado">Manter-me conectado</label>
+            </p>
+             
+            <p> 
+              <input type="submit" value="Entrar" /> 
+            </p>
+             
+          </form>
+        </div>
+        
+      </div>
+    </div>  
 </body>
 
 </html>
