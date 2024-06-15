@@ -1,65 +1,59 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
+    padding-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    display: flex;
     flex-direction: column;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-header{
+header {
     background: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    height:100px; 
     top: 0;
     left: 0;
     z-index: 100;
     position: fixed;
 }
 
-.container{
+.container {
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
 }
 
-.container h1{
+.container h1 {
     font-size: 50px;
     color: #1C1F3F;
     font-weight: 500;
     margin-bottom: 20px;
-    margin-top: 300px;
     text-align: center;
+    margin-top: 70px;
 }
 
-
-
-
-.select-row{
+.select-row {
     display: flex;
     gap: 80px;
     margin-top: 60px;
-
-
 }
 
-.select-row select{
+.select-row select {
     width: 200px;
     height: 40px;
     padding-left: 15px;
@@ -72,12 +66,12 @@ header{
     cursor: pointer;
 }
 
-.select-row .title{
+.select-row .title {
     position: relative;
     color: #007BA7;
 }
 
-.select-row .title::before{
+.select-row .title::before {
     position: absolute;
     content: 'Animal';
     top: -10px;
@@ -89,15 +83,15 @@ header{
     font-size: 15px;
 }
 
-.select-row .title2::before{
+.select-row .title2::before {
     content: 'Sexo';
 }
 
-.select-row .title3::before{
+.select-row .title3::before {
     content: 'Tamanho';
 }
 
-.select-row .btn-search{
+.select-row .btn-search {
     width: 200px;
     height: 40px;
     padding-left: 15px;
@@ -111,20 +105,20 @@ header{
     padding: 0 20px;
     transition: 0.7s;
 }
-.select-row .btn-search:hover{
+
+.select-row .btn-search:hover {
     color: #1C1F3F;
     background: #0ef;
 }
 
-.fotos-animais{
-    
+.fotos-animais {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 15px;
     margin-top: 40px;
 }
 
-.card-animal{
+.card-animal {
     width: 200px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -136,8 +130,7 @@ header{
     transition: 0.7s;
 }
 
-
-.card-animal:hover{
+.card-animal:hover {
     transform: scale(1.1);
 }
 
@@ -146,25 +139,23 @@ header{
     padding: 20px;
 }
 
-.card-animal .foto-animal img{
+.card-animal .foto-animal img {
     width: 80%;
     height: auto;
     display: block;
     margin: 0 auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    
 }
 
-.card-animal .nome-animal{
+.card-animal .nome-animal {
     text-align: center;
     padding: 10px 0;
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    
 }
 
- .login-button{
+.login-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,7 +163,7 @@ header{
     margin-right: 130px;
 }
 
-.login-button button{
+.login-button button {
     padding: 0 10px;
     border-radius: 5px;
     background: #0ef;
@@ -181,12 +172,11 @@ header{
     font-weight: 400;
     cursor: pointer;
     width: 90px;
-    height: 40px; 
+    height: 40px;
     transition: 0.7s;
 }
 
-
-.animal .login-button{
+.animal .login-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,54 +184,43 @@ header{
     margin-right: 130px;
 }
 
-.ver-mais button{
+.ver-mais button {
     border: 2px solid #007BA7;
     color: #1C1F3F;
     background: #fdfdfd;
-
 }
 
-.login-button button:hover{
+.login-button button:hover {
     transform: scale(1.1);
     background: #0ef;
 }
 
-@media  (max-width:900px){
-    .select-row{
+@media (max-width: 900px) {
+    .select-row {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Define duas colunas com largura igual */
-        gap: 30px; /* Ajuste o espaçamento entre os elementos conforme necessário */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px; 
         margin-top: 60px;
     }
 
-    .select-row .title::before{
+    .select-row .title::before {
         left: -230px;
     }
-
-    
-
 }
 
-@media  (max-width:600px){
-
-    .fotos-animais{
-    
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+@media (max-width: 600px) {
+    .fotos-animais {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         gap: 15px;
         margin-top: 40px;
     }
-
-    
-
 }
 
 /*********
 FOOTER
-
 **********/
 
-footer{
+footer {
     width: 100%;
     padding: 15px 100px;
     background: #000000;
@@ -252,32 +231,29 @@ footer{
     color: #fdfdfd;
 }
 
-
-.footer-col{
+.footer-col {
     flex-direction: column;
     display: flex;
     gap: 18px;
 }
 
-.footer-col .icon-text{
+.footer-col .icon-text {
     display: flex;
     align-items: center;
     gap: 6px;
     transition: 0.7s;
 }
 
-.footer-col .icon-text h3{
+.footer-col .icon-text h3 {
     color: #0ef;
-
 }
 
-.footer-col .icon-text:hover{
+.footer-col .icon-text:hover {
     color: #0ef;
     transform: scale(1.1);
-    
 }
 
-.footer-col-links{
+.footer-col-links {
     flex-direction: column;
     display: flex;
     gap: 10px;
@@ -285,60 +261,54 @@ footer{
     justify-content: center;
 }
 
-
-.footer-col-links a{
+.footer-col-links a {
     text-decoration: none;
     color: #fdfdfd;
     transition: 0.7s;
 }
 
-.footer-col-links a:hover{
+.footer-col-links a:hover {
     color: #0ef;
     transform: scale(1.1);
 }
 
-.midia-contato{
+.midia-contato {
     align-items: center;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.midia-contato i{
+.midia-contato i {
     margin-top: 20px;
     font-size: 22px;
     transition: 0.7s;
-    
 }
 
-.midia-contato i:hover{
+.midia-contato i:hover {
     color: #0ef;
     transform: scale(1.1);
 }
 
-
-@media (max-width:850px){
-    footer{
-
+@media (max-width: 850px) {
+    footer {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .footer-col{
+    .footer-col {
         margin: 50px auto;
     }
 
-    .footer-col .icon-text{
+    .footer-col .icon-text {
         margin: 6px auto;
     }
 
-    
-    .footer-col-links a{
+    .footer-col-links a {
         margin: 6px auto;
     }
 }
 /*********
 FOOTER
-
 **********/
