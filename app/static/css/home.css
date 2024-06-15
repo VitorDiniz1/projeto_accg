@@ -747,8 +747,12 @@ Anaiamis
         gap: 15px;
         margin-top: 40px;
     }
-}
 
+        
+    .animal .login-button {
+        margin-right: 0px;
+    }
+}
 
 
 
