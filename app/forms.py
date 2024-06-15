@@ -5,4 +5,4 @@ from app.models import Animais
 class AnimaisForm(ModelForm):
     class Meta:
         model = Animais
-        fields = ["nome", "idade", "descricao", "castrado", "vacinado", "vermifugado", "sexo", "tipo", "url_imagem", "porte"]
+        fields = ["nome", "idade", "descricao", "castrado", "vacinado", "vermifugado", "fiv", "felv", "sexo", "tipo", "url_imagem", "porte"]

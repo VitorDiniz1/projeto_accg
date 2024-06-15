@@ -27,6 +27,8 @@ class Animais(models.Model):
     castrado = models.BooleanField()
     vacinado = models.BooleanField()
     vermifugado = models.BooleanField()
+    fiv = models.BooleanField(default=False)
+    felv = models.BooleanField(default=False)
     sexo = models.CharField(max_length=1, choices=sexo)
     tipo = models.CharField(max_length=10, choices=tipo)
     porte = models.CharField(max_length=20, choices=porte, default=porte["Médio Porte"])
