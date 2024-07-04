@@ -328,7 +328,7 @@ HOME
 }
 
 .slider{
-    width: 900px;
+    width: 700px;
     height: 400px;
     margin: 40px auto 0;
     overflow: hidden;
@@ -337,7 +337,7 @@ HOME
 }
 
 .slides {
-    width: 900%;
+    width: 700%;
     height: 400px;
     display: flex;
 }
@@ -353,12 +353,12 @@ HOME
 }
 
 .slide img{
-    width: 900px;
+    width: 700px;
 }
 
 .manual-navigation{
     position: absolute;
-    width: 900px;
+    width: 700px;
     margin-top: -40px;
     display: flex;
     justify-content: center;
@@ -407,7 +407,7 @@ HOME
 
 .navigation-auto{
     position: absolute;
-    width: 900px;
+    width: 700px;
     margin-top: 360px;
     display: flex;
     justify-content: center;
@@ -458,16 +458,16 @@ HOME
     }
 
     .slider{
-        width: 600px;
+        width: 500px;
         height: 300px;
     }
     .slides{
-        width: 600%;
+        width: 500%;
         height: 300px;
     }
 
     .slide img{
-        width: 600px;
+        width: 500px;
     }
 
     .manual-navigation{
@@ -554,7 +554,7 @@ HOME
     }
 
     .slider{
-        width: 400px;
+        width: 350px;
         height: 200px;
     }
     .slides{
@@ -563,7 +563,7 @@ HOME
     }
 
     .slide img{
-        width: 400px;
+        width: 350px;
     }
 
     .manual-navigation{
@@ -742,10 +742,20 @@ Anaiamis
 }
 
 @media (max-width: 600px) {
+
+    .select-row{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 30px;
+        margin-top: 60px;
+    }
     .fotos-animais {
-        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         gap: 15px;
         margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
         
